@@ -255,6 +255,10 @@ footer {
        
     }
 
+    .information{
+        padding:20px;
+    }
+
  
     .menu-toggle {
         display: flex;
