@@ -71,10 +71,8 @@ body {
 
 /* Hamburger */
 .menu-toggle {
-    display: none;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -84,7 +82,7 @@ body {
     height: 3px;
     width: 100%;
     background-color: #333;
-    border-radius: 2px;
+    border-radius: 15px;
     transition: all 0.3s ease;
 }
 
@@ -247,29 +245,30 @@ footer {
 
 /* Mobile hamburger menu */
 @media (max-width: 768px) {
-    /* Navbar row: logo vlevo, hamburger vpravo */
+
     .navbar-container nav {
-        flex-direction: row; /* logo + hamburger in a row */
-        justify-content: space-between; /* logo vlevo, hamburger vpravo */
+        flex-direction: row; 
+        justify-content: space-between; 
         align-items: center;
-        position: relative; /* pro absolutní menu */
-        padding: 10px 20px; /* menší padding na mobil */
+        position: relative; 
+        margin-bottom: 20px;
+       
     }
 
-    /* Zobraz hamburger */
+ 
     .menu-toggle {
         display: flex;
     }
 
     /* Menu vysouvací pod navbar */
     .nav-menu {
-        position: absolute;  /* vysune se přesně pod navbar */
-        top: 100%;           /* hned pod řádkem navbaru */
+        position: absolute;
+        top: 100%;          
         left: 0;
         right: 0;
         background-color: #d9b99b;
         width: 100%;
-        height: 0;           /* default hidden */
+        height: 0;          
         overflow: hidden;
         flex-direction: column;
         transition: height 0.3s ease;
@@ -278,12 +277,12 @@ footer {
     }
 
     .nav-menu.active {
-        height: auto;        /* vysunutí */
-        padding: 10px 0;
+        height: auto;        
+        padding:10px;
     }
 
     .nav-menu li a {
-        padding: 10px 20px;
+        padding:10px;
         display: block;
     }
 }
