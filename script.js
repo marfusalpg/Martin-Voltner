@@ -26,27 +26,4 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.remove('active');
         }
     });
-
-    // ==========================
-    // Custom iPad-like cursor
-    // ==========================
-    const cursor = document.getElementById('cursor');
-
-    document.addEventListener('mousemove', e => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-
-    const interactiveElements = document.querySelectorAll('a, button, .nav-menu li a');
-
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1.8)';
-            cursor.style.background = 'rgba(0,0,0,0.3)';
-        });
-        el.addEventListener('mouseleave', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursor.style.background = 'rgba(0,0,0,0.5)';
-        });
-    });
 });
