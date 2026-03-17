@@ -1,6 +1,6 @@
 /* General */
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -106,11 +106,13 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+
 }
 
 .introduction p {
     color: #444;
     max-width: 600px;
+
 }
 
 .highlight {
@@ -125,11 +127,12 @@ body {
 
 /* Profile picture */
 .profile-picture {
+    padding-bottom: 5px;
     background: linear-gradient(to bottom, #d9b99b 50%, white 50%);
     width: 100%;
     height: 100%;
     overflow: hidden;
-    margin-bottom: 20px;
+
 }
 
 .profile-picture img {
@@ -138,6 +141,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
 }
 
 /* main */
@@ -192,14 +196,29 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 1000px) {
+@media (max-width: 1000px) and (min-width: 769px) {
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .logo h1 {
+        font-size: 60px;
+    }
+
+    .logo p {
+        font-size: 20px;
+    }
+
     .navbar-container {
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
 
     .navbar-container nav {
         flex-direction: column;
-        gap: 50px;
+        gap: 10px;
         padding-top: 20px;
     }
 
@@ -213,54 +232,36 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
-    .navbar-container {
-        padding-bottom: 10px;
-    }
-
-    .navbar-container nav {
-        flex-direction: column;
-        font-size: 12px;
-        gap: 20px;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .nav-menu li a {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-
-    .index-container {
-        padding: 20px;
-    }
-
-    .profile-picture img {
-        width: 100px;
-        height: 100px;
-    }
-}
 
 /* Mobile hamburger menu */
 @media (max-width: 768px) {
 
+      .navbar-container {
+        padding-bottom: 30px;
+    }
+
     .navbar-container nav {
-        flex-direction: row; 
-        justify-content: space-between; 
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 20px;
+    }
+    .index-container {
+        padding: 20px;
+    }
+    .navbar-container nav {
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        position: relative; 
+        position: relative;
         margin-bottom: 20px;
-       
+
     }
 
-    .information{
-        margin:20px;
+    .information {
+        margin: 20px;
     }
 
- 
+
     .menu-toggle {
         display: flex;
     }
@@ -268,12 +269,12 @@ footer {
     /* Menu vysouvací pod navbar */
     .nav-menu {
         position: absolute;
-        top: 100%;          
+        top: 100%;
         left: 0;
         right: 0;
         background-color: #d9b99b;
         width: 100%;
-        height: 0;          
+        height: 0;
         overflow: hidden;
         flex-direction: column;
         transition: height 0.3s ease;
@@ -282,12 +283,17 @@ footer {
     }
 
     .nav-menu.active {
-        height: auto;        
-        padding:10px;
+        height: auto;
+        padding: 10px;
     }
 
     .nav-menu li a {
-        padding:10px;
+        padding: 10px;
         display: block;
+    }
+
+    .profile-picture img {
+        width: 150px;
+        height: 150px;
     }
 }
