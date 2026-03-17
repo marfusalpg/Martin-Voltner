@@ -56,7 +56,7 @@ body {
 
 .nav-menu li a {
     display: flow-root;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px 15px;
     text-decoration: none;
     color: #333;
@@ -296,4 +296,32 @@ footer {
         width: 150px;
         height: 150px;
     }
+}
+
+/* === Custom iPad-like cursor === */
+body {
+    cursor: none; /* schová defaultní kurzor */
+}
+
+#cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    pointer-events: none; /* aby kurzor neblokoval kliknutí */
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.15s ease, background 0.15s ease;
+     /* === inner shadow === */
+     box-shadow: 
+        inset 0 0 5px rgba(255,255,255,0.3), /* jemný světlý stín uvnitř */
+        inset 0 0 10px rgba(0,0,0,0.4),      /* jemný tmavý stín pro hloubku */
+        0 0 2px rgba(0,0,0,0.2);             /* lehký vnější blur pro celkovou hloubku */
+}
+
+/* Skryje defaultní kurzor nad interaktivními prvky */
+a, button, .nav-menu li a {
+    cursor: none;
 }
