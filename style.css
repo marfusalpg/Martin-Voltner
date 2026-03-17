@@ -1,9 +1,10 @@
 /* General */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 body {
+    overflow: overlay;
     background-color: white;
     padding: 0;
     margin: 0;
