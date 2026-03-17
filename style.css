@@ -9,52 +9,26 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     color: #333;
+    overflow-x: hidden;
+    /* zamezí horizontálním mezerám na mobilu */
 }
-
-
 
 /* Navbar */
 .navbar-container {
     width: 100%;
-    /* ne 100vw */
     box-sizing: border-box;
-    /* aby padding nepřetékalo */
     padding-left: 50px;
     padding-right: 50px;
     background-color: #d9b99b;
-
-
 }
 
 .navbar-container nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
-}
-
-.navbar-container nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-container nav ul li a {
-    display: flow-root;
-    border-radius: 10px;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.navbar-container nav ul li a:hover {
-    color: white;
-    background-color: #f1dcc9;
+    padding: 10px 0;
+    position: relative;
+    /* pro absolutní menu */
 }
 
 .logo h1 {
@@ -68,6 +42,62 @@ body {
     margin: 0;
     font-size: 14px;
     opacity: 0.8;
+}
+
+/* Menu links */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    display: flow-root;
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: white;
+    background-color: #f1dcc9;
+}
+
+/* Hamburger */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(14px, 14px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Introduction */
@@ -153,22 +183,18 @@ main {
     color: #666;
 }
 
-
-/* footer */
+/* Footer */
 footer {
     text-align: center;
-    border-top: #000000 solid 1px;
+    border-top: #000 solid 1px;
     padding: 20px 0;
     color: #333;
     font-size: 14px;
 }
 
-
 /* Responsive */
 @media (max-width: 1000px) {
-    ¨ .navbar-container {
-        width: 100%;
-        background-color: #d9b99b;
+    .navbar-container {
         padding-bottom: 20px;
     }
 
@@ -178,7 +204,7 @@ footer {
         padding-top: 20px;
     }
 
-    .navbar-container nav ul li a {
+    .nav-menu li a {
         font-size: 18px;
         padding: 8px 12px;
     }
@@ -189,10 +215,7 @@ footer {
 }
 
 @media (max-width: 600px) {
-
     .navbar-container {
-        width: 100%;
-        background-color: #d9b99b;
         padding-bottom: 10px;
     }
 
@@ -202,11 +225,12 @@ footer {
         gap: 20px;
     }
 
-    .navbar-container nav ul {
-        gap: 10px;
+    .nav-menu {
+        flex-direction: column;
+        gap: 0;
     }
 
-    .navbar-container nav ul li a {
+    .nav-menu li a {
         font-size: 14px;
         padding: 8px 12px;
     }
@@ -218,5 +242,48 @@ footer {
     .profile-picture img {
         width: 100px;
         height: 100px;
+    }
+}
+
+/* Mobile hamburger menu */
+@media (max-width: 768px) {
+    /* Navbar row: logo vlevo, hamburger vpravo */
+    .navbar-container nav {
+        flex-direction: row; /* logo + hamburger in a row */
+        justify-content: space-between; /* logo vlevo, hamburger vpravo */
+        align-items: center;
+        position: relative; /* pro absolutní menu */
+        padding: 10px 20px; /* menší padding na mobil */
+    }
+
+    /* Zobraz hamburger */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Menu vysouvací pod navbar */
+    .nav-menu {
+        position: absolute;  /* vysune se přesně pod navbar */
+        top: 100%;           /* hned pod řádkem navbaru */
+        left: 0;
+        right: 0;
+        background-color: #d9b99b;
+        width: 100%;
+        height: 0;           /* default hidden */
+        overflow: hidden;
+        flex-direction: column;
+        transition: height 0.3s ease;
+        border-radius: 0 0 10px 10px;
+        z-index: 100;
+    }
+
+    .nav-menu.active {
+        height: auto;        /* vysunutí */
+        padding: 10px 0;
+    }
+
+    .nav-menu li a {
+        padding: 10px 20px;
+        display: block;
     }
 }
