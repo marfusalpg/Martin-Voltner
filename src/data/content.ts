@@ -16,14 +16,14 @@ export const education = [
 export const employment = [
   {
     title: "Freelance",
-    location: "3D Modeling",
+    location: "Web developement, 3D Modeling",
     detail: "",
     period: "2024 - Now",
   },
   {
     title: "Fushix_",
     location: "3D Designer, Graphical Designer",
-    detail: "Sidehustle",
+    detail: "In my free time",
     period: "2020 - Now",
   },
 ];
