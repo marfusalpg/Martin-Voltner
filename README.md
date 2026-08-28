@@ -20,7 +20,8 @@
 
 🌐 Live Website
 
-→ Visit my portfolio
+[→ Visit my portfolio](https://marfusalpg.github.io/Martin-Voltner/)<br>
+
 
 This is my personal portfolio website, created to showcase my development projects, technical skills, experience and interests.
 
@@ -65,38 +66,6 @@ Technology	Purpose
 🐙 GitHub	Source code and deployment
 🚀 GitHub Pages	Website hosting
 
-⸻
-
-📁 Project Structure
-
-Martin-Voltner/
-│
-├── public/
-│   └── ...                  # Static assets
-│
-├── src/
-│   ├── components/
-│   │   ├── Navbar/
-│   │   ├── Hero/
-│   │   ├── About/
-│   │   ├── Projects/
-│   │   ├── Skills/
-│   │   ├── Contact/
-│   │   └── Footer/
-│   │
-│   ├── assets/              # Images and other assets
-│   ├── App.tsx              # Main application component
-│   ├── main.tsx             # Application entry point
-│   └── ...
-│
-├── .github/
-│   └── workflows/           # GitHub Actions
-│
-├── index.html
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
 
 ⸻
 
