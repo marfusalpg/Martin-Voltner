@@ -780,6 +780,7 @@ max-width: 1200px;
   z-index: 80;
   transition: transform 0.18s ease, opacity 0.18s ease;
   mix-blend-mode: difference;
+  
 }
 
 .scroll-top.hidden {
