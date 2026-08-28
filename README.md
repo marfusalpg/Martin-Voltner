@@ -76,7 +76,7 @@ The portfolio is deployed using GitHub Pages.
 
 Live Website
 
-marfusalpg.github.io/Martin-Voltner
+[marfusalpg.github.io/Martin-Voltner](marfusalpg.github.io/Martin-Voltner)<br>
 
 ⸻
 
@@ -107,13 +107,14 @@ Visit my portfolio
 
 🐙 GitHub
 
-github.com/marfusalpg
+[github.com/marfusalpg](github.com/marfusalpg)<br>
 
 ⸻
 
 📄 License
 
 This project is primarily a personal portfolio.
+Highly inspired by [Adam Vavruša](adamvavrusa.cz)<br>
 
 ⸻
 
