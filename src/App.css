@@ -2,13 +2,11 @@
   color: #f5f5f5;
   background: #000;
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 0.7s ease;
 }
 
 .portfolio-shell.is-ready {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .page-loader {
