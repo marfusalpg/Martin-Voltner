@@ -40,8 +40,8 @@ export const contactItems = [
     href: "https://www.instagram.com/fushin_bum/",
   },
   {
-    label: "Discord",
-    value: "fushin_bum",
-    href: undefined,
+    label: "GitHub",
+    value: "marfusalpg",
+    href: "https://github.com/marfusalpg",
   },
 ];
